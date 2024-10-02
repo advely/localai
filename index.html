@@ -1,18 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
+    <title>Local AI - Your Planning Applications Podcast</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #4a90e2, #5ad0ba);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .container label {
+            display: block;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .container input[type="text"] {
+            padding: 0.5rem;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            border: none;
+            width: 80%;
+            margin-bottom: 1rem;
+        }
+
+        .container button {
+            background-color: #ff8c42;
+            color: white;
+            padding: 0.75rem 2rem;
+            font-size: 1.25rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .container button:hover {
+            background-color: #e07735;
+        }
+
+        footer {
+            margin-top: 2rem;
+            font-size: 0.85rem;
+        }
+    </style>
 </head>
+
 <body>
-        <h1>Welcome to local-ai.  Website is under construction, check back later!</h1>
-        <h1>Enter Your Postcode</h1>
+    <header>
+        <h1>Local AI</h1>
+        <p>Discover what's happening with planning applications near your home. Let AI generate personalized podcasts discussing local developments!</p>
+    </header>
+
+    <div class="container">
         <form action="/submit-postcode" method="POST">
-            <label for="postcode">Enter Postcode:</label>
-            <input type="text" id="postcode" name="postcode" required>
-            <button type="submit">Submit</button>
+            <label for="postcode">Enter Your Postcode:</label>
+            <input type="text" id="postcode" name="postcode" placeholder="e.g. SW1A 1AA" required>
+            <button type="submit">Generate Podcast</button>
         </form>
+    </div>
+
+    <footer>
+        <p>Powered by AI | Bringing planning applications to life through podcasts</p>
+    </footer>
 </body>
-    
+
 </html>
