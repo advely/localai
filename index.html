@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local AI - Your Planning Applications Podcast</title>
+    <title>Local AI - Your Town Planning Podcast</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -26,9 +26,15 @@
 
         p {
             font-size: 1.25rem;
-            max-width: 600px;
+            /* max-width: 600px; */
             text-align: center;
             margin-bottom: 2rem;
+        }
+
+        .header {
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
         }
 
         .container {
@@ -69,32 +75,94 @@
 
         footer {
             margin-top: 2rem;
-            font-size: 0.85rem;
+            font-size: 0.05rem;
+        }
+
+        .audio-panel {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            /* background-color: #f0f0f0; */
+        }
+
+        .audio-item {
+            text-align: center;
+        }
+
+        .audio-icon {
+            font-size: 40px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .audio-label {
+            font-size: 16px;
+            color: #333;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
     <header>
-        <h1>Local AI</h1>
-        <p>Discover what's happening with planning applications near your home. Let AI generate personalized podcasts discussing local developments!</p>
+        <div class="header">
+            <h1>The Local Planning News Podcast</h1>
+            <p>Listen to a podcast, unqiue to you, about how town planning is impacting your home.</p>
+        </div>
     </header>
 
     <div class="container">
-        <form action="/submit-postcode" method="POST">
-            <label for="postcode">Enter Your Postcode:</label>
-            <input type="text" id="postcode" name="postcode" placeholder="e.g. SW1A 1AA" required>
-            <button type="submit">Generate Podcast</button>
-        </form>
+        <div>
+            <form action="/submit-postcode" method="POST">
+                <label for="postcode">Enter Your Postcode:</label>
+                <input type="text" id="postcode" name="postcode" placeholder="e.g. SW1A 1AA" required>
+                <button type="submit">Give it to Me</button>
+            </form>
+        </div>
+
+        <div>
+            <h1>Example Podcasts</h1>
+
+            <div class="audio-panel">
+                <!-- First Audio Item -->
+                <div class="audio-item">
+                    <i class="fas fa-play-circle audio-icon" onclick="document.getElementById('audio1').play();"></i>
+                    <audio id="audio1" src="audio1.mp3"></audio>
+                    <div class="audio-label">NE61 6JN</div>
+                </div>
+
+                <!-- Second Audio Item -->
+                <div class="audio-item">
+                    <i class="fas fa-play-circle audio-icon" onclick="document.getElementById('audio2').play();"></i>
+                    <audio id="audio2" src="audio2.mp3"></audio>
+                    <div class="audio-label">CR0 4TD</div>
+                </div>
+
+                <!-- Third Audio Item -->
+                <div class="audio-item">
+                    <i class="fas fa-play-circle audio-icon" onclick="document.getElementById('audio3').play();"></i>
+                    <audio id="audio3" src="audio3.mp3"></audio>
+                    <div class="audio-label">NG18 4QW</div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div>
+            <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+            <stripe-pricing-table pricing-table-id="prctbl_1Q5RSaRrKVf6n1SAEkYxWoIX"
+                publishable-key="pk_test_51Q5RHGRrKVf6n1SAY01Cujh3d4oek72nfRstQ6d8DQZJfo6QaoccK6gUOcwSOYfaXqqCoqGndbAuSiF9ASES5XFi00KozEpYRn">
+            </stripe-pricing-table>
+        </div>
+
     </div>
 
-        <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-            <stripe-pricing-table pricing-table-id="prctbl_1Q5RSaRrKVf6n1SAEkYxWoIX"
-            publishable-key="pk_test_51Q5RHGRrKVf6n1SAY01Cujh3d4oek72nfRstQ6d8DQZJfo6QaoccK6gUOcwSOYfaXqqCoqGndbAuSiF9ASES5XFi00KozEpYRn">
-    </stripe-pricing-table>
+
 
     <footer>
-        <p>Powered by AI | Bringing planning applications to life through podcasts</p>
+        <p>Powered by Local.ai | Protecting your home</p>
     </footer>
 </body>
 
