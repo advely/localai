@@ -90,15 +90,9 @@
             text-align: center;
         }
 
-        .audio-icon {
-            font-size: 40px;
-            cursor: pointer;
-            margin-bottom: 10px;
-        }
-
         .audio-label {
-            font-size: 16px;
-            color: #333;
+            font-size: 1rem;
+            color: #eee8e8;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -117,35 +111,31 @@
             <form action="/submit-postcode" method="POST">
                 <label for="postcode">Enter Your Postcode:</label>
                 <input type="text" id="postcode" name="postcode" placeholder="e.g. SW1A 1AA" required>
-                <button type="submit">Give it to Me</button>
+                <button type="submit">Let's Listen</button>
             </form>
         </div>
 
         <div>
-            <h1>Example Podcasts</h1>
+            <h2>Example Podcasts</h2>
 
-            <div class="audio-panel">
                 <!-- First Audio Item -->
                 <div class="audio-item">
-                    <i class="fas fa-play-circle audio-icon" onclick="document.getElementById('audio1').play();"></i>
-                    <audio id="audio1" src="audio/NE716JN.mp3"></audio>
+                    <audio id="audio1" src="audio/NE716JN.mp3" controls></audio>
                     <div class="audio-label">NE61 6JN</div>
                 </div>
 
                 <!-- Second Audio Item -->
                 <div class="audio-item">
-                    <i class="fas fa-play-circle audio-icon" onclick="document.getElementById('audio2').play();"></i>
-                    <audio id="audio2" src="audio/CR04TD.mp3"></audio>
+                    <audio id="audio2" src="audio/CR04TD.mp3" controls></audio>
                     <div class="audio-label">CR0 4TD</div>
                 </div>
 
                 <!-- Third Audio Item -->
                 <div class="audio-item">
-                    <i class="fas fa-play-circle audio-icon" onclick="document.getElementById('audio3').play();"></i>
-                    <audio id="audio3" src="/audio/NG53EH.mp3"></audio>
+                    <audio id="audio3" src="/audio/NG53EH.mp3" controls></audio>
                     <div class="audio-label">NG5 3EH</div>
                 </div>
-            </div>
+            
 
         </div>
 
